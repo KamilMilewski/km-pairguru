@@ -4,6 +4,10 @@ class MoviesController < ApplicationController
   expose_decorated(:movies) { Movie.all }
   expose(:movie)
 
+  def show
+    @rating = Tmdb::Keyword.detail(1721)
+  end
+
   def send_info
     MovieInfoMailer.send_info(current_user, movie).deliver_now
     redirect_to :back, notice: 'Email sent with movie info'

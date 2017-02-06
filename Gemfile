@@ -13,6 +13,7 @@ gem 'faker', '~> 1.4.3'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets-rails', '>= 2.1.4', :require => 'sprockets/railtie'
+gem 'themoviedb-api'
 
 group :development do
   gem 'rails-erd'
