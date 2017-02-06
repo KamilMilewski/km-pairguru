@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.7.1'
-gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'devise'
@@ -9,9 +8,10 @@ gem 'haml-rails', '~> 0.8'
 gem 'draper'
 gem 'decent_decoration'
 gem 'decent_exposure'
-gem 'bootstrap-sass'
 gem 'annotate', '~> 2.6.5'
 gem 'faker', '~> 1.4.3'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '~> 5.0'
 
 group :development do
   gem 'rails-erd'
