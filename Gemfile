@@ -12,6 +12,7 @@ gem 'annotate', '~> 2.6.5'
 gem 'faker', '~> 1.4.3'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
+gem 'sprockets-rails', '>= 2.1.4', :require => 'sprockets/railtie'
 
 group :development do
   gem 'rails-erd'
@@ -28,7 +29,6 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'faker', '~> 1.4.3'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'simplecov'
 end
