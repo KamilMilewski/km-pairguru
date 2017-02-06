@@ -5,7 +5,16 @@ class MoviesController < ApplicationController
   expose(:movie)
 
   def show
-    @rating = Tmdb::Keyword.detail(1721)
+    if m = Tmdb::Search.movie(movie.title)
+      @rating = m.results.first.vote_average
+      poster_path = m.results.first.poster_path
+      @poster_url = "http://image.tmdb.org/t/p/w185//#{poster_path}"
+      @overview = m.results.first.overview
+    else
+      @rating = 'no data'
+      @poster_url = ''
+      @overview = 'no data'
+    end
   end
 
   def send_info

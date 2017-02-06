@@ -1,1 +1,1 @@
-Tmdb::Api.key(ENV['themoviedbkey'])
+Tmdb::Api.key(ENV['THEMOVIEDBKEY'])
