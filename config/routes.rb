@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-
   root 'home#welcome'
+
+  namespace :api do
+    namespace :v1 do
+      resources :movies, only: [:show, :index]
+    end
+  end
+
   resources :genres, only: :index do
     member do
       get 'movies'
