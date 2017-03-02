@@ -1,0 +1,3 @@
+%h1= @profile.email
+%h5= "Phone number: #{@profile.phone_number}"
+%h5= link_to 'edit', edit_profile_path(@profile)

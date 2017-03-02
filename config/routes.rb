@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
+  get 'profiles/index'
+
+  get 'profiles/show'
+
+  get 'profiles/edit'
+
+  get 'profiles/update'
+
   devise_for :users
   root 'home#welcome'
+
+  resources :profiles
 
   namespace :api do
     namespace :v1 do

@@ -1,8 +1,12 @@
 class MoviesController < ApplicationController
   before_action :authenticate_user!, only: [:send_info]
 
-  expose_decorated(:movies) { Movie.all }
+  # expose_decorated(:movies) { Movie.all.includes(:genre).paginate(page: params[:page]) }
   expose(:movie)
+
+  def index
+    @movies = Movie.all.includes(:genre).paginate(page: params[:page])
+  end
 
   def show
     if m = Tmdb::Search.movie(movie.title)

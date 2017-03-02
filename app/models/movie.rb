@@ -14,4 +14,8 @@
 
 class Movie < ActiveRecord::Base
   belongs_to :genre
+
+  def cover
+    'http://lorempixel.com/100/150/' + %W(abstract nightlife transport).sample + '?a=' + SecureRandom.uuid
+  end
 end

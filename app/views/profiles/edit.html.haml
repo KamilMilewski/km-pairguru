@@ -1,0 +1,4 @@
+%h1 Profiles#edit
+=form_for @profile, url: { controller: 'profiles', action: 'update'} do |f|
+  =f.text_field :phone_number, label: 'Phone number:'
+  =f.submit

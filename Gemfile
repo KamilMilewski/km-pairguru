@@ -14,6 +14,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 gem 'sprockets-rails', '>= 2.1.4', :require => 'sprockets/railtie'
 gem 'themoviedb-api'
+gem 'will_paginate'
 
 group :development do
   gem 'rails-erd'
